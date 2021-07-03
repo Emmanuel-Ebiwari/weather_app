@@ -7,7 +7,7 @@ void main() => runApp(MaterialApp(
       title: 'Weather App',
       home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.red,
       ),
     ));
 
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                     'Currently in Lagos',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 14.0,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
                   temp != null ? '${temp.toString()}\u00B0' : 'Loading',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 40.0,
+                      fontSize: 60.0,
                       fontWeight: FontWeight.w600),
                 ),
                 Padding(
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                     currently != null ? currently.toString() : 'Loading',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 14.0,
+                        fontSize: 18.0,
                         fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -99,9 +99,20 @@ class _HomeState extends State<Home> {
                   iconColor: Colors.red,
                   child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.thermometerHalf),
-                    title: Text('Temperature'),
+                    title: Text('Temperature',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.red,
+                          fontWeight: FontWeight.w400,
+                        )),
                     trailing: Text(
-                        temp != null ? '${temp.toString()}\u00B0' : 'Loading'),
+                      temp != null ? '${temp.toString()}\u00B0' : 'Loading',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: temp > 15.0 ? Colors.red : Colors.blue,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
                   ),
                 ),
                 ListTileTheme(
@@ -110,10 +121,21 @@ class _HomeState extends State<Home> {
                   iconColor: Colors.grey[400],
                   child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.cloud),
-                    title: Text('Weather'),
-                    trailing: Text(description != null
-                        ? description.toString()
-                        : 'Loading'),
+                    title: Text('Weather',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                        )),
+                    trailing: Text(
+                        description != null
+                            ? description.toString()
+                            : 'Loading',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w300,
+                        )),
                   ),
                 ),
                 ListTileTheme(
@@ -122,18 +144,37 @@ class _HomeState extends State<Home> {
                   iconColor: Colors.lightBlue,
                   child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.sun),
-                    title: Text('Humidity'),
-                    trailing: Text(
-                        humidity != null ? humidity.toString() : 'Loading'),
+                    title: Text('Humidity',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w400,
+                        )),
+                    trailing:
+                        Text(humidity != null ? humidity.toString() : 'Loading',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.lightBlue,
+                              fontWeight: FontWeight.w300,
+                            )),
                   ),
                 ),
                 ListTileTheme(
                   selectedColor: Colors.yellow,
                   child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.wind),
-                    title: Text('Wind Speed'),
+                    title: Text('Wind Speed',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.grey[600],
+                          fontWeight: FontWeight.w400,
+                        )),
                     trailing: Text(
-                        windSpeed != null ? windSpeed.toString() : 'Loading'),
+                        windSpeed != null ? windSpeed.toString() : 'Loading',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w300,
+                        )),
                   ),
                 )
               ],
