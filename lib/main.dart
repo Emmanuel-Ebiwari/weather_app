@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
             child: ListView(
               children: <Widget>[
                 ListTileTheme(
-                  selectedColor: Colors.red,
+                  contentPadding: EdgeInsets.all(15.0),
                   iconColor: Colors.red,
                   child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.thermometerHalf),
@@ -116,10 +116,10 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 ListTileTheme(
-                  contentPadding: EdgeInsets.all(20.0),
-                  selectedColor: Colors.yellow,
+                  contentPadding: EdgeInsets.all(15.0),
                   iconColor: Colors.grey[400],
                   child: ListTile(
+                    tileColor: Colors.lightBlue[50],
                     leading: FaIcon(FontAwesomeIcons.cloud),
                     title: Text('Weather',
                         style: TextStyle(
@@ -139,8 +139,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 ListTileTheme(
-                  contentPadding: EdgeInsets.all(20.0),
-                  selectedColor: Colors.yellow,
+                  contentPadding: EdgeInsets.all(15.0),
                   iconColor: Colors.lightBlue,
                   child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.sun),
@@ -160,8 +159,9 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 ListTileTheme(
-                  selectedColor: Colors.yellow,
+                  contentPadding: EdgeInsets.all(15.0),
                   child: ListTile(
+                    tileColor: Colors.lightBlue[50],
                     leading: FaIcon(FontAwesomeIcons.wind),
                     title: Text('Wind Speed',
                         style: TextStyle(
