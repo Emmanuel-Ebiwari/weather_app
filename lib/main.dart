@@ -125,7 +125,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                           fontSize: 20.0,
                           color: Colors.grey,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w500,
                         )),
                     trailing: Text(
                         description != null
@@ -134,7 +134,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                           fontSize: 20.0,
                           color: Colors.grey,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.w400,
                         )),
                   ),
                 ),
