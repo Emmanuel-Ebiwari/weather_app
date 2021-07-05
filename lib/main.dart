@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() => runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Weather App',
       home: Home(),
       theme: ThemeData(
