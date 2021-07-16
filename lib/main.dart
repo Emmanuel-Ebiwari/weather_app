@@ -55,7 +55,11 @@ class _HomeState extends State<Home> {
           Container(
             height: MediaQuery.of(context).size.height / 2.5,
             width: MediaQuery.of(context).size.width,
-            color: temp > 15.0 ? Colors.red : Colors.blue,
+            color: temp != null
+                ? temp > 15.0
+                    ? Colors.red
+                    : Colors.blue
+                : Colors.red,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,7 +114,11 @@ class _HomeState extends State<Home> {
                       temp != null ? '${temp.toString()}\u00B0' : 'Loading',
                       style: TextStyle(
                         fontSize: 20.0,
-                        color: temp > 15.0 ? Colors.red : Colors.blue,
+                        color: temp != null
+                            ? temp > 15.0
+                                ? Colors.red
+                                : Colors.blue
+                            : Colors.red,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
